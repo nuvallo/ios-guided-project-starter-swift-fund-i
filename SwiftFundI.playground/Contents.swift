@@ -41,18 +41,22 @@ let ios = "Apple's mobile operating system"
 //: In the line above, the constant `ios` stores a value "Apple's mobile operating system". This value is a `String`, so the data type of `ios` is `String`. The type was _inferred_ by the value provided.
 //: Another way to type a container is to set it explicitly. See some examples of this below.
 
-var onSale:Bool = true
+var onSale:Bool = true // or false
 
 
 //: ## Type Safety
 //: Once a container's data type is set, it cannot hold a value of any other type
 
-
+// this will not work because onSale is always a Bool type
+// onSafe = "yes"
 
 //: ## Type Coercion
 //: Types are never automatically converted into another type.
 
+let label = "The width is "
+let width = 94
 
+let CombinedString = label + String(width)
 
 //: ## String Interpolation and Concatenation
 //: Using the `+` operator with two strings is called _string concatentation_. One string is appended to the end of another.
@@ -61,32 +65,59 @@ var onSale:Bool = true
 
 //: The below example shows the _string interpolation_ characters (`\()`). These allow a `String` (or non-string) value to be placed in-line inside a larger `String` literal value. If the value is not already a `String`, it will be converted.
 
-
+let widthLabel:String = "The width is \(width)"
 
 //: ## Collections
 //: ### Arrays
 //: A Swift array is a collection of like objects, and they are stored in the order they are added. Accessing a particular element is done by using its index value (which starts at 0).
 
-
+let shipCaptains = ["Malcolm Reynolds", "Jean-Luc Picard", "James T. Kirk", "Han Solo"]
+let differentCaptains = ["Jean-Luc Picard", "James T. Kirk", "Han Solo"]
+let james = shipCaptains[2]
 
 //: Array equality is determined by looking at each element. If all elements are the same, and in the same order, the two arrays are equal.
 
+if shipCaptains == differentCaptains {
+    print("Arrays are equal")
+} else {
+    print("Arrays are not equal")
+}
 
 
 //: Since `shipCaptains` was declared as a constant, we must convert it to a mutable array before we can add entries.
 
+var hobbies = ["coding", "OneWheeling"]
+var moreCaptains = shipCaptains
 
+// .append - Method that adds a new element to the end of an array
+moreCaptains.append("Some Captain")
+
+// .insert - Method that allows to choose where the element is added to in the array
+moreCaptains.insert("New Captain", at: 2)
+
+// Replace an item
+moreCaptains[0] = "Jack Sparrow"
 
 //: ### Dictionaries
 //: A Swift dictionary is similar to an array in that is a collection, but the items are stored in no particular order. To access an item, its associated key is provided. Dictionaries are also called "key-value" stores. The key has a type, and the value can have the same or a different type.
 
+var occupations = ["Spencer": "IOS Instructor", "Brian": "Team Lead"]
+
+var brain = occupations["Spencer"]
+
+// Removes by key
+occupations.removeValue( forKey: "Spencer")
 
 
 //: ## Looping
 //: ### `for`
 //: `for` loops allow for iterating over a collection of elements (usually an array), examining each element in turn.
 
+let scores = [92, 10, 84, 72, 19]
 
+for score in scores {
+   print(score) // 92 10 84 72 19 on seperate lines
+}
 
 //: ### `switch`
 //: `switch` statements are useful when a multiple-choice path is possible for your code, and you want to choose a single path at runtime, based on some criteria.
