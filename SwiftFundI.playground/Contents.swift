@@ -119,17 +119,25 @@ for score in scores {
    print(score) // 92 10 84 72 19 on seperate lines
 }
 
-//: ### `switch`
-//: `switch` statements are useful when a multiple-choice path is possible for your code, and you want to choose a single path at runtime, based on some criteria.
-
-
-
 //: ## Functions
 //: A function in Swift is nothing more than a collection of instructions that accomplish some task. The advantage to grouping the instructions into a function is that the function can then be called whenever that task should be performed, rather than having to list out those instrutions a second, third, or nth time.
 
 
+func averageScores (scores: (Int)) -> Int {
+    return scores // return value
+}
+
+func firstName() {
+    print("Tyler") // side effect
+}
+
+firstName() // call
+averageScores(scores: 10) // call
 
 //: ## Tuples
 //: Tuples are a lightweight way of grouping related values into a single compound value.
 
+// Grouping items into a tuple
+let me = (name: "Joe", color: "Blue", major: "IOS Instructor")
+me.name
 
