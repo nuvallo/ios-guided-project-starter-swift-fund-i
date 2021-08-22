@@ -2,7 +2,7 @@
 //: ## Hello, World!
 //: As tradition dictates, any exploration of a new language needs to start with "hello, world"
 
-
+print("Hello, World!")
 
 //: ## Comments
 //: A comment is text that is ignored by the compiler. So it can be plain text, or even code. If it formatted like the examples below, it will be completely ignored when the project is built. Comments are notes to yourself or others about how a given block of code functions.
@@ -17,25 +17,31 @@
 //: ## Identifiers
 //: first character A-Z or a-z or _, followed by any of these plus 0-9
 
-
+let lambdaSchool = "Awesome"
 
 //: ## Mutability
 //: There are two kinds of containers that hold values in Swift. One kind is called a constant, because once a value has been set, it cannot change for the lifetime of that container. Constants are declared with the `let` keyword.
 
-
+let name = "Tyler"
 
 //: Variables are declared with the 'var' keyword
-
+var myName = "Tyler"
+myName = "Shawn"
 
 
 //: ## Type Inference and Explicit Typing
 //: All containers in Swift must have a type set on them. The containers we've seen so far had their types set implicitly. This is called _type inference_. Meaning the kind of object stored in the container was determined by looking at what kind of value was assigned to the container.
 
+// Without Type Inference
+var myNumber: Int = 10
+// Type Inferencel
+let ios = "Apple's mobile operating system"
 
 
 //: In the line above, the constant `ios` stores a value "Apple's mobile operating system". This value is a `String`, so the data type of `ios` is `String`. The type was _inferred_ by the value provided.
 //: Another way to type a container is to set it explicitly. See some examples of this below.
 
+var onSale:Bool = true
 
 
 //: ## Type Safety
